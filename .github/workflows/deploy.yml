@@ -37,6 +37,8 @@ jobs:
         run: npm install
 
       - name: Build
+        env:
+          PUBLIC_URL: https://copy-of-a.github.io/tangem-test
         run: npm run build
 
       - name: Upload artifact
