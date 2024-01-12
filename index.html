@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Test task for frontend position at Tangem." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/variables.css" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <title>Tangem Test</title>
+  </head>
+  <body>
+    <header class="header"></header>
+    <main>
+      <aside
+        id="banner-top"
+        class="banner-top flex-container_centered"
+        aria-label="Promotion banner"
+      >
+        <div class="banner-top__container flex-container_centered">
+          <p class="banner-top__text">
+            <span class="text-bold">Black Friday</span><span class="tablet-hide">,</span
+            ><span class="mobile-hide tablet-hide"> 24-27 Nov</span>
+          </p>
+          <p class="banner-top__text banner-top__text_accent">
+            <span class="text-accent">10%OFF</span>
+          </p>
+          <p class="banner-top__text mobile-hide">
+            Use code <span class="text-accent">10FRIDAY</span
+            ><span class="mobile-hide tablet-hide">&nbsp;at checkout</span>
+          </p>
+        </div>
+
+        <button class="button banner-top__button-cta flex-container_centered mobile-hide">
+          <span class="text-gradient banner-top__button-text">Shop now</span>
+        </button>
+        <button
+          class="button icon-close banner-top__button-close mobile-hide tablet-hide"
+          aria-label="close top banner"
+        ></button>
+        <button
+          class="button icon-next banner-top__button-next desktop-hide tablet-hide"
+          aria-label="next"
+        ></button>
+      </aside>
+
+      <aside id="banner-bottom" class="banner-bottom" aria-label="Promotion banner">
+        <div class="banner-bottom__content">
+          <h2 class="banner-bottom__heading">Black Friday</h2>
+          <p class="banner-bottom__sale text-gradient">10%OFF</p>
+          <p>Use code <span class="text-accent">10FRIDAY</span> at checkout</p>
+          <button class="button banner-bottom__button-cta">
+            Shop now <span class="mobile-hide">through Monday</span>
+          </button>
+        </div>
+        <button
+          id="banner-bottom-button-close"
+          class="button icon-close banner-bottom__button-close"
+          aria-label="close bottom banner"
+        ></button>
+      </aside>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

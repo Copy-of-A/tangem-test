@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --color-text-primary: #fff;
+  --color-text-accent: #d7a830;
+  --color-text-secondary: #6c6c70;
+  --color-text-button-light: #0b0b0b;
+
+  /* Fonts */
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-size-body: 16px;
+  --font-size-heading: 46px;
+  --font-weight-light: 400;
+  --font-weight-normal: 500;
+  --font-weight-semi-bold: 600;
+}

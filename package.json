@@ -1,0 +1,32 @@
+{
+  "name": "tangem-test",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "postinstall": "npx simple-git-hooks"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "lint-staged": "^15.2.0",
+    "postcss": "^8.4.33",
+    "postcss-custom-media": "^10.0.2",
+    "postcss-nested": "^6.0.1",
+    "prettier": "^3.2.0",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,html,ts,tsx,css}": "prettier -w"
+  }
+}

@@ -1,0 +1,190 @@
+@import url('./breakpoints.css');
+@import url('./utils.css');
+
+body {
+  min-width: 320px;
+  min-height: 200vh;
+  font-size: var(--font-size-body);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.1;
+}
+
+.header {
+  height: 54px;
+  width: 100%;
+}
+
+.banner-top {
+  height: 54px;
+  width: 100%;
+  background:
+    no-repeat url(/black-friday.png) left -55px/380px,
+    linear-gradient(180deg, #101010 0%, #0f0f0f 100%);
+  position: relative;
+  padding: 0 24px;
+
+  @media (--sm-viewport) {
+    justify-content: flex-end;
+  }
+
+  &__container {
+    --size-delimeter-dot: 3px;
+    --size-gap: 12px;
+    gap: calc(2 * var(--size-gap) + var(--size-delimeter-dot));
+
+    @media (--sm-viewport) {
+      gap: 4px;
+    }
+  }
+
+  &__text {
+    color: var(--color-text-primary);
+    font-weight: var(--font-weight-light);
+    position: relative;
+    line-height: 1.25;
+    letter-spacing: 0.048px;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      opacity: 0.15;
+      background-color: var(--color-text-primary);
+      position: absolute;
+      right: calc(-1 * (var(--size-gap) + var(--size-delimeter-dot)));
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (--sm-viewport) {
+        display: none;
+      }
+    }
+
+    &_accent {
+      letter-spacing: -0.64px;
+    }
+  }
+
+  &__button-cta {
+    width: 115px;
+    height: 38px;
+    padding: 10px 14px;
+    border-radius: 100px;
+    position: absolute;
+    right: 60px;
+    background: var(--color-text-primary);
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-text-accent);
+    }
+  }
+
+  &__button-text {
+    --color-from: rgb(117, 117, 117, 1);
+    --color-to: #000 50%;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
+  }
+
+  &__button-close {
+    position: absolute;
+    right: 22px;
+  }
+
+  &__button-next {
+    margin-left: 18px;
+  }
+}
+
+.banner-bottom {
+  --ident-size: 34px;
+  --banner-height: 349px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 600px;
+  height: var(--banner-height);
+  background: no-repeat center/100% url('/black-friday.png');
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
+  padding: 55px 30px;
+  position: fixed;
+  bottom: calc(-1 * var(--banner-height));
+  right: var(--ident-size);
+  transition: bottom 0.45s ease-in-out;
+
+  @media (--sm-viewport) {
+    width: 100%;
+    --ident-size: 0;
+    border-radius: 0;
+    align-items: center;
+    background-size: cover;
+    background-position: right;
+  }
+
+  @media (--md-viewport) {
+    --ident-size: 17px;
+  }
+
+  &_visible {
+    transition: bottom 0.7s cubic-bezier(0.17, 1.31, 0.86, 1.12);
+    bottom: var(--ident-size);
+  }
+
+  &__button-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__content {
+    text-align: center;
+    color: var(--color-text-secondary);
+  }
+
+  &__heading {
+    font-size: var(--font-size-heading);
+    font-style: normal;
+    color: var(--color-text-primary);
+    letter-spacing: -1.84px;
+    margin-bottom: 25px;
+
+    @media (--lg-viewport) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__button-cta {
+    padding: 12px 24px;
+    font-size: var(--font-size-body);
+    color: var(--color-text-primary);
+    border-radius: 14px;
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: max-content;
+    margin-top: 40px;
+
+    @media (--md-viewport) {
+      right: 24px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-text-accent);
+      opacity: 1;
+    }
+  }
+
+  &__sale {
+    --color-from: rgba(125, 83, 23, 1);
+    --color-to: rgba(237, 223, 149, 1);
+    font-size: var(--font-size-heading);
+    letter-spacing: -1.84px;
+    font-weight: var(--font-weight-normal);
+    margin-bottom: 14px;
+  }
+}
