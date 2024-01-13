@@ -10,6 +10,7 @@
     "postinstall": "npx simple-git-hooks"
   },
   "devDependencies": {
+    "@types/node": "^20.11.0",
     "autoprefixer": "^10.4.16",
     "lint-staged": "^15.2.0",
     "postcss": "^8.4.33",
