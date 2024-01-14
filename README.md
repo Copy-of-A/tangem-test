@@ -25,3 +25,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## ⚠️ Если используется блокировщик рекламы в браузере, баннеры могут не отображаться
+![telegram-cloud-photo-size-2-5269552430264211217-y](https://github.com/Copy-of-A/tangem-test/assets/33464723/ada28947-0fc9-420b-b36a-92348796a786)
