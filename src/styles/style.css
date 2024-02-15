@@ -113,9 +113,10 @@ body {
   border-radius: 16px;
   padding: 55px 30px;
   position: fixed;
-  bottom: calc(-1 * var(--banner-height));
+  transform: translateY(var(--banner-height));
+  bottom: 0;
   right: var(--ident-size);
-  transition: bottom 0.45s ease-in-out;
+  transition: transform 0.45s ease-in-out;
 
   @media (--sm-viewport) {
     width: 100%;
@@ -131,8 +132,8 @@ body {
   }
 
   &_visible {
-    transition: bottom 0.7s cubic-bezier(0.17, 1.31, 0.86, 1.12);
-    bottom: var(--ident-size);
+    transition: transform 0.7s cubic-bezier(0.17, 1.31, 0.86, 1.12);
+    transform: translateY(calc(-1 * var(--ident-size)));
   }
 
   &__button-close {
